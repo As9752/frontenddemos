@@ -1,0 +1,21 @@
+<p>cart works!</p>
+<p>cart works!</p>
+
+<div>
+    <div *ngFor="let cartItem of cartItems" id="cart_items">
+        <!-- {{cartItems.length}} -->
+        <div class="product-info">
+            <h2>{{cartItem.title}}</h2>
+            <p>
+                <img [src]="cartItem.imgUrl" width="200" id="product-image" />
+            </p>
+               <p id="product-description"> {{cartItem.description}}</p>
+            <p id="product-price">Price: {{cartItem.price}}</p>
+   
+            <h3>Total:{{cartTotal}}</h3>
+            <br/>
+            <!-- <h3>{{cartItem.id}}</h3> -->
+
+    <button (click)="deleteFromCart(cartItem.id)">Delete From Cart</button>
+</div>
+

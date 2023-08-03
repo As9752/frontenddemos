@@ -1,0 +1,14 @@
+<p>product-detail works!</p>
+<div *ngIf="product" id="details_id">
+    <div class="product-info">
+    <h2>{{product.title}}</h2>
+    <p>
+        <img [src]="product.imgUrl" width="200" id="product-image" />
+    </p>
+       <p id="product-description"> {{product.description}}</p>
+    <p id="product-price">Price: {{product.price}}</p>
+    <button (click)="onAddToCart(product)" id="btn">Add to Cart</button>
+    </div>
+</div>
+
+

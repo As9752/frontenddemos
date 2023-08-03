@@ -1,0 +1,23 @@
+<form [formGroup]="formData" (ngSubmit)="onAddProduct()" class="form-container">
+  <div class="form-group">
+    <label for="title">Name</label>
+
+    <input type="text" class="form-control" formControlName="title" />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+
+    <input type="text" class="form-control" formControlName="description"/>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+
+    <input type="text" class="form-control" formControlName="price" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Product</button>
+
+  <button class="btn btn-secondary" (click)="hideForm()">Hide Form</button>
+</form>
